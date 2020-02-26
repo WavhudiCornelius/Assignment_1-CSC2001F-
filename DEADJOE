@@ -69,3 +69,25 @@ Processing '/etc/joe/joerc'...
 Processing '/etc/joe/ftyperc'...
 Finished processing /etc/joe/ftyperc
 Finished processing /etc/joe/joerc
+
+*** These modified files were found in JOE when it aborted on Mon Feb 24 17:31:56 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+LSArrayApp.java
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

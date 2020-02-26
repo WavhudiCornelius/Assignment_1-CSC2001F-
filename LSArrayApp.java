@@ -27,33 +27,48 @@ public class LSArrayApp{
 		}
 		
 		// Reading what the singly array file has stored so far
+		/*for(int k = 0; k < data.length; k++){
+			String line = data[k];
+			int index = line.indexOf(" ");
+			String key = line.substring(0,index);
+			System.out.println("This is index: " + k);
+			System.out.println(key + " : " + line);
+		}*/
 		if( args.length == 3){
 			printAreas(args[0], args[1], args[2]);
+		}else if(args.length == 0){
+			printAllAreas();
 		}
-		/*if(args != null){
-			for(int x = 0; x < data.length; x++){
-				String temp = data[x].substring(0,6);
-				String test = args[0] + "_" + args[1] + "_" + args[2];
-				if(test.equals(temp)){
-					System.out.println("This is index: " + x);
-					System.out.println(data[x]);
-				}
-			}
-		}else{
-			for(int y = 0; y < data.length; y++){
-				String details = data[y];
-				System.out.println(details);
-			}
-		}*/
 	}
 	public static void printAreas(String stage, String day, String startTime){
 		String question = stage + "_" + day + "_" + startTime;
+		System.out.println("Stage\tDay\tStartTime\tAreasAffected");
 		for(int x = 0; x < data.length; x++){
-			String temp = data[x].substring(0,6);
-			if(question.equals(temp)){
-				System.out.println("This is index: " + x);
-				System.out.println(data[x]);
+			String line = data[x];
+			int index = line.indexOf(" ");
+			String key = line.substring(0, index);
+			if(question.equals(key)){
+				//System.out.println("This is index: " + x);
+				String areas = line.substring(index+1);
+				System.out.println(stage + "\t" + day + "\t" + startTime + "\t\t" + areas);
+				//System.out.println(data[x]);
 			}
+		}
+	}
+	
+	public static void printAllAreas(){
+		System.out.println("Stage\tDay\tStartTime\tAreasAffected");
+		for(int y = 0; y < data.length; y++){
+			String details = data[y];
+			System.out.println(details);
+			/*String line = data[y];
+			int index = line.indexOf(" ");
+			String[] values = line.split("_");
+			String stage = values[0];
+			String day = values[1];
+			String startTime = values[2];
+			String areas = line.substring(index+1);
+			System.out.println(stage + "\t" + day + "\t" + startTime + "\t\t" + areas);*/
 		}
 	}
 }
